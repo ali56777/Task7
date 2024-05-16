@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplication Table Printer</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <h1>Multiplication Table Printer</h1>
+    <div>
+        <label for="number">Enter an integer:</label>
+        <input type="number" id="number" min="1">
+    </div>
+    <button onclick="printMultiplicationTable()">Print Multiplication Table</button>
+    <div id="result"></div>
+
+    <script>
+        function printMultiplicationTable() {
+            var number = parseInt(document.getElementById('number').value);
+            var result = '';
+
+            for (var i = 1; i <= 12; i++) {
+                result += (number * i) + ' ';
+            }
+
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
